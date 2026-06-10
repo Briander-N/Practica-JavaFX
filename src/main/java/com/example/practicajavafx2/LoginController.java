@@ -67,13 +67,21 @@ public class LoginController implements Initializable {
                 && claveIngresada.equals(claveAdmin) && rolIngresado.equals("Administrador")) {
 
             lblValidacion.setText("ACCESO CORRECTO COMO ADMINISTRADOR!");
-            cambiarVentana("administrador.fxml", "Administrador");
+            try {
+                cambiarVentana("administrador.fxml", "Administrador");
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
 
         } else if (usuarioIngresado.equals(usuarioCajero)
                 && claveIngresada.equals(claveCajero) && rolIngresado.equals("Cajero")) {
 
             lblValidacion.setText("ACCESO CORRECTO COMO CAJERO!");
-            cambiarVentana("cajero.fxml", "Cajero");
+            try {
+                cambiarVentana("cajero.fxml", "Cajero");
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
 
         } else {
 
@@ -82,7 +90,20 @@ public class LoginController implements Initializable {
     }
 
     @FXML
-    private void cambiarVentana(String archivoFXML, String titulo) {
+    private void cambiarVentana(String archivoFXML, String titulo) throws IOException {
+        try{
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(archivoFXML));
+            Parent root = loader.load();
+
+            Stage stage = (Stage) txtUsuario.getScene().getWindow();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.setTitle(titulo);
+            stage.show();
+
+        } catch (Exception e){
+            e.printStackTrace();
+        }
 
     }
 

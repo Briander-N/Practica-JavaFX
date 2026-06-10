@@ -20,11 +20,11 @@ public class CajeroController {
 
     //TextField
     @FXML
-    public Label txtNombreCliente;
+    public TextField txtNombreCliente;
     @FXML
-    public Label txtCedulaCliente;
+    public TextField txtCedulaCliente;
     @FXML
-    public Label txtTelefonoCliente;
+    public TextField txtTelefonoCliente;
     @FXML
-    public Label txtDireccionCliente;
+    public TextField txtDireccionCliente;
 }
