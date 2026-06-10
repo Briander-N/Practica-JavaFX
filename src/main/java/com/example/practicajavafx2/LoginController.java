@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class HelloController implements Initializable {
+public class LoginController implements Initializable {
 
     private final String usuarioAdmin = "Admin";
     private final String claveAdmin = "Admin";
@@ -61,47 +61,29 @@ public class HelloController implements Initializable {
 
         String usuarioIngresado = txtUsuario.getText().trim();
         String claveIngresada = txtContrasena.getText().trim();
+        String rolIngresado = cbxRol.getValue();
 
         if (usuarioIngresado.equals(usuarioAdmin)
-                && claveIngresada.equals(claveAdmin)) {
+                && claveIngresada.equals(claveAdmin) && rolIngresado.equals("Administrador")) {
 
-            lblValidacion.setText("ACCESO CORRECTO!");
-            cambiarVentana("Administrador.fxml", "Administrador");
+            lblValidacion.setText("ACCESO CORRECTO COMO ADMINISTRADOR!");
+            cambiarVentana("administrador.fxml", "Administrador");
 
         } else if (usuarioIngresado.equals(usuarioCajero)
-                && claveIngresada.equals(claveCajero)) {
+                && claveIngresada.equals(claveCajero) && rolIngresado.equals("Cajero")) {
 
-            lblValidacion.setText("ACCESO CORRECTO!");
-            cambiarVentana("Cajero.fxml", "Cajero");
+            lblValidacion.setText("ACCESO CORRECTO COMO CAJERO!");
+            cambiarVentana("cajero.fxml", "Cajero");
 
         } else {
 
             lblValidacion.setText("ACCESO INCORRECTO!");
         }
     }
+
     @FXML
     private void cambiarVentana(String archivoFXML, String titulo) {
 
-        try {
-            FXMLLoader loader = new FXMLLoader(
-                    getClass().getResource(archivoFXML)
-            );
-
-            Parent root = loader.load();
-
-            Stage stage = (Stage) txtUsuario.getScene().getWindow();
-
-            Scene scene = new Scene(root);
-
-            stage.setScene(scene);
-            stage.setTitle(titulo);
-            stage.show();
-
-        } catch (IOException e) {
-
-            lblValidacion.setText("Error al cargar: " + archivoFXML);
-            e.printStackTrace();
-        }
     }
 
     @FXML

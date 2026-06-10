@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.practicajavafx2.CajeroController">
+   <children>
+      <Label fx:id="lblTituloCajero" layoutX="250.0" layoutY="26.0" text="CAJERO">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblNombreCliente" layoutX="115.0" layoutY="78.0" text="Nombre:" />
+      <Label fx:id="lblCedulaCliente" layoutX="115.0" layoutY="124.0" text="Cedula:" />
+      <Label fx:id="lblTelefonoCliente" layoutX="115.0" layoutY="163.0" text="Teléfono:" />
+      <Label fx:id="lblDireccionCliente" layoutX="115.0" layoutY="200.0" text="Dirección:" />
+      <TextField fx:id="txtNombreCliente" layoutX="176.0" layoutY="74.0" prefHeight="25.0" prefWidth="331.0" />
+      <TextField fx:id="txtCedulaCliente" layoutX="176.0" layoutY="120.0" prefHeight="25.0" prefWidth="331.0" />
+      <TextField fx:id="txtTelefonoCliente" layoutX="176.0" layoutY="159.0" prefHeight="25.0" prefWidth="331.0" />
+      <TextField fx:id="txtDireccionCliente" layoutX="176.0" layoutY="196.0" prefHeight="25.0" prefWidth="331.0" />
+      <Button fx:id="btnRegistrarCliente" layoutX="249.0" layoutY="286.0" mnemonicParsing="false" text="Registrar Cliente" />
+      <Label fx:id="lblMensajeCajero" layoutX="269.0" layoutY="250.0" prefHeight="17.0" prefWidth="62.0" />
+   </children>
+</AnchorPane>

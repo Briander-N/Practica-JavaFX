@@ -4,21 +4,21 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="545.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
+<AnchorPane prefHeight="400.0" prefWidth="545.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.practicajavafx2.AdministradorController">
    <children>
-      <Label layoutX="184.0" layoutY="24.0" text="ADMINISTRADOR">
+      <Label fx:id="lblTituloAdmin" layoutX="184.0" layoutY="24.0" text="ADMINISTRADOR">
          <font>
             <Font name="System Bold" size="21.0" />
          </font>
       </Label>
-      <Label layoutX="95.0" layoutY="82.0" text="Nombre Producto:" />
+      <Label fx:id="lblProducto" layoutX="95.0" layoutY="82.0" text="Nombre Producto:" />
       <TextField fx:id="txtProducto" layoutX="214.0" layoutY="78.0" prefHeight="25.0" prefWidth="237.0" />
-      <Label layoutX="95.0" layoutY="125.0" text="Categoría:" />
-      <Label layoutX="95.0" layoutY="168.0" text="Precio:" />
+      <Label fx:id="lblCategoria" layoutX="95.0" layoutY="125.0" text="Categoría:" />
+      <Label fx:id="lblPrecio" layoutX="95.0" layoutY="168.0" text="Precio:" />
       <TextField fx:id="txtPrecio" layoutX="214.0" layoutY="164.0" prefHeight="25.0" prefWidth="237.0" />
-      <Label layoutX="95.0" layoutY="214.0" text="Stock:" />
+      <Label fx:id="lblStock" layoutX="95.0" layoutY="214.0" text="Stock:" />
       <TextField fx:id="txtStock" layoutX="214.0" layoutY="210.0" prefHeight="25.0" prefWidth="237.0" />
-      <Button layoutX="199.0" layoutY="304.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="121.0" text="Registrar Producto" />
+      <Button fx:id="btnRegistrarProducto" layoutX="199.0" layoutY="304.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="121.0" text="Registrar Producto" />
       <Label fx:id="lblMensajeProducto" layoutX="259.0" layoutY="267.0" />
       <TextField fx:id="txtCategoria" layoutX="214.0" layoutY="121.0" prefHeight="25.0" prefWidth="237.0" />
    </children>
