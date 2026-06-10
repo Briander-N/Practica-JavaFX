@@ -63,6 +63,11 @@ public class LoginController implements Initializable {
         String claveIngresada = txtContrasena.getText().trim();
         String rolIngresado = cbxRol.getValue();
 
+        if(usuarioIngresado.isEmpty() || claveIngresada.isEmpty() || rolIngresado == null){
+            lblValidacion.setText("NO DEJES LOS CAMPOS VACIOS!!!");
+            return;
+        }
+
         if (usuarioIngresado.equals(usuarioAdmin)
                 && claveIngresada.equals(claveAdmin) && rolIngresado.equals("Administrador")) {
 
